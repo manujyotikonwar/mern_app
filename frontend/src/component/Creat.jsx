@@ -9,7 +9,7 @@ function Creat() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const addUser = { name, email, age };
-    const response = await fetch("http://localhost:4000", {
+    const response = await fetch("https://mern-app-zv0o.onrender.com", {
       method: "POST",
       body: JSON.stringify(addUser),
       headers: {

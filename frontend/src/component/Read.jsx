@@ -4,7 +4,7 @@ function Read() {
   const [data, setData] = useState();
   const [Error, setError] = useState("");
   async function getData() {
-    const response = await fetch("http://localhost:4000");
+    const response = await fetch("https://mern-app-zv0o.onrender.com");
     const result = await response.json();
     if (!response.ok) {
       console.log(result.error);
@@ -20,7 +20,7 @@ function Read() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4000/${id}`, {  // Use backticks here
+      const response = await fetch(`https://mern-app-zv0o.onrender.com/${id}`, {  // Use backticks here
         method: "DELETE"
       });
       const result = await response.json();
